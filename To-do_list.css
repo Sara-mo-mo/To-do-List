@@ -106,19 +106,40 @@ button:hover {
     margin-top: 20px;
     color: #0f0f1e;
 }
-
 #taskList li {
     background: #f1f3f5;
-    padding: 12px;
+    padding: 10px 15px;
     margin-bottom: 8px;
-    border-radius: 6px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0f0f1e;
+    transition: all 0.3s ease;
+}
+
+#taskList li span {
     cursor: pointer;
-    transition: all 0.2s ease;
+    flex-grow: 1;
     text-align: right;
 }
 
-#taskList li:hover {
-    background: #ffe3e3;
-    color: #e63946;
+#taskList li.completed span {
     text-decoration: line-through;
+    color: #adb5bd;
+}
+
+.delete-btn {
+    background: transparent !important;
+    color: #e63946 !important;
+    width: auto !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
 }
