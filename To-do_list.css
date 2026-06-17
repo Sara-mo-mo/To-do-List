@@ -1,0 +1,124 @@
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    background-color: #0f0f1e;
+    color: #ffffff;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'cairo', Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: move 20s infinite alternate;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+body::before {
+    background: #b76fd9;
+    top: -150px; left: -150px;
+}
+
+body::after {
+    background: #77c6ff;
+    bottom: -150px; right: -150px;
+    animation-delay: -10s;
+}
+
+@keyframes move {
+    0% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(100px,-50px) scale(1.1); }
+    66% { transform: translate(-20px,20px) scale(0.9); }
+    100% { transform: translate(50px,100px) scale(1.05); }
+}
+
+h1 {
+    font-family: 'cairo', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.container {
+    background: #ffffff;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px; 
+    padding: 25px;
+    width: 90%; 
+    max-width: 450px; 
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #0f0f1e;
+    font-size: 125%;
+    text-align: center;
+    margin-top: 0;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input {
+    background: #f1f3f5;
+    color: #0f0f1e;
+}
+
+button {
+    background: #3a86ff;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #256bdf;
+}
+
+#taskList {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+    color: #0f0f1e;
+}
+
+#taskList li {
+    background: #f1f3f5;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: right;
+}
+
+#taskList li:hover {
+    background: #ffe3e3;
+    color: #e63946;
+    text-decoration: line-through;
+}
