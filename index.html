@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
+    <title>قائمة المهام الذكية</title>
     <link rel="stylesheet" href="To-do_list.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="WhatsApp Image 2026-03-20 at 14.08.22.jpeg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>TO DO LIST</h1>
-    
-    <div class="container">
-        <h2>المهام الحالية</h2>
+    <div class="blob-container">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <div class="todo-container">
+        <h2>قائمة مهامي 📝</h2>
         
-        <input type="text" id="taskInput" placeholder="اكتب مهمة جديدة...">
-        <button onclick="addTask()">إضافة مهمة</button>
-        
-        <ul id="taskList"></ul>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="اكتب مهمة جديدة هنا...">
+            <input type="datetime-local" id="taskDeadline" title="اختر موعد المهمة">
+            <button onclick="addTask()">إضافة</button>
+        </div>
+
+        <ul id="taskList">
+        </ul>
     </div>
 
     <script src="To-do_list.js"></script>
